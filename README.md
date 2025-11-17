@@ -1,60 +1,102 @@
-# Stock Portfolio Tracker
+📊 Stock Portfolio Tracker
 
-This is a simple **Python** project developed as part of my internship at **CodeAlpha**. It allows users to calculate their total investment in stocks based on predefined stock prices using basic Python features.
+A simple yet advanced Tkinter-based desktop application that allows users to track stock investments, calculate portfolio values, visualize data with graphs, and save results in multiple formats.
 
----
+This project includes:
 
-## Project Objective
+GUI built with Tkinter
 
-Build a console-based stock tracker that:
-- Accepts user input for stock symbol and quantity
-- Uses a hardcoded dictionary of stock prices
-- Calculates the total investment value
-- Optionally saves the result to a `.txt` or `.csv` file
+Data persistence with JSON
 
----
+Logging system
 
-## Technologies & Concepts Used
+CSV/TXT/JSON export options
 
-- Python (standard library)
-- Dictionaries for storing stock prices
-- Input/output operations
-- Basic arithmetic calculations
-- File handling for saving results
-- Conditional statements for logic flow
+Portfolio visualization using Matplotlib
 
----
+Ability to add custom stocks manually
 
-## How It Works
+🚀 Features
+✅ 1. Select & Calculate Investment
 
-1. User inputs a stock symbol (e.g., `AAPL`) and number of shares.
-2. The program looks up the stock price from a hardcoded dictionary.
-3. Calculates the total investment value.
-4. Asks the user if they want to save the result.
-5. Saves the result in `.txt` or `.csv` format if requested.
+Choose a stock from dropdown
 
----
+Enter the number of shares
 
-## Example Stock Prices
+App calculates total investment value
 
-```python
-stock_prices = {
-    'AAPL': 175.12,
-    'GOOGL': 135.86,
-    'MSFT': 328.45,
-    'TSLA': 249.75,
-    'AMZN': 143.22,
-    'NVDA': 485.89
-}
-## Sample output
+Displays detailed result instantly
 
-Enter the stock symbol (e.g., AAPL): TSLA
-Enter the number of shares: 10
+✅ 2. Auto-Saving & Loading Stock Prices
 
-You own 10 shares of TSLA at $249.75 each.
-Total investment value: $2497.50
+Loads prices from stocks.json
 
-Do you want to save the result to a file? (yes/no): yes
-Choose file format: 'txt' or 'csv': txt
+If file doesn’t exist, it creates one with default stock prices
 
-Result saved to 'investment_result.txt'
+✅ 3. Export Results
+
+You can export the latest calculation to:
+
+TXT (investment_result.txt)
+
+CSV (investment_result.csv)
+
+JSON (investment_result.json)
+
+✅ 4. Add New Stocks
+
+You can manually add new stock symbols and prices.
+Changes are saved permanently in stocks.json.
+
+✅ 5. View Portfolio Summary
+
+Displays all investments in a TreeView table including:
+
+Price
+
+Quantity
+
+Total value
+
+✅ 6. Portfolio Graph
+
+Visualizes your holdings through a pie chart using Matplotlib.
+
+✅ 7. Logging System
+
+All important activities are recorded in portfolio_log.txt:
+
+App start/close
+
+Calculation logs
+
+Errors
+
+Stock additions
+
+📂 Project Structure
+|-- main.py                  # Main TKinter Application
+|-- stocks.json              # Stock price storage
+|-- portfolio_log.txt        # Auto-generated logs
+|-- investment_result.txt    # Saved TXT output
+|-- investment_result.csv    # Saved CSV output
+|-- investment_result.json   # Saved JSON output
+|-- README.md                # Documentation
+
+🧩 Technologies Used
+
+Python
+
+Tkinter – GUI
+
+Matplotlib – Graphs
+
+JSON – Data storage
+
+CSV – Export
+
+Logging – Activity tracking
+
+🤝 Contributing
+
+Feel free to submit issues or pull requests!
